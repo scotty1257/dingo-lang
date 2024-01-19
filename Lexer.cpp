@@ -11,13 +11,21 @@
 template <class _T_C>
 const void ReadFile(std::string& fileName, std::string& direc, _T_C<std::string>& outputContainer)
 {
+    std::ifstream inputFile;
+    std::string fileNamePath = direc + fileName;
+    inputFile(fileNamePath);
 
+    std::string line = "";
+    while (std::getline(inputFile, line))
+    {
+        outputContainer.push_back(line);
+    }    
 }
 
 template <class _T>
 const void ReadTokens(_T<std::string>& textInput)
 {
-    
+
 }
 
 template <class _T>
